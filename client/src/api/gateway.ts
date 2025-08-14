@@ -6,7 +6,6 @@ const BE_URL = import.meta.env.VITE_SERVER_URL || 'http://localhost:3002';
 class Gateway {
   static async get<T>(path: string, params?: any): Promise<AxiosResponse<T>> {
     const url = `${BE_URL}/${path}`;
-    console.log('Making API call to:', url, 'with params:', params);
     const res = await axios.get<T>(url, { params });
     return res;
   }

@@ -26,7 +26,6 @@ const AutomationTable = (): JSX.Element => {
   const { queryParams, updateQueryParams } = useUrlState();
   const { data, loading, error, allAutomations } = useAutomations(queryParams);
 
-  console.log('AutomationTable - current queryParams:', queryParams);
 
   const headers: (keyof Automation)[] = ['id', 'name', 'status', 'creationTime', 'type'];
 
@@ -49,7 +48,6 @@ const AutomationTable = (): JSX.Element => {
   };
 
   const handlePageSizeChange = (newPageSize: number) => {
-    console.log('handlePageSizeChange called with:', newPageSize);
     updateQueryParams({
       limit: newPageSize,
       page: 1 // Reset to first page when changing page size
@@ -57,7 +55,6 @@ const AutomationTable = (): JSX.Element => {
   };
 
   const handlePageChange = (newPage: number) => {
-    console.log('handlePageChange called with:', newPage);
     updateQueryParams({
       page: newPage
     });

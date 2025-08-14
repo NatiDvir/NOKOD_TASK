@@ -19,19 +19,16 @@ interface AutomationPaginationProps {
 const AutomationPagination = ({ paginationData, onPageSizeChange, onPageChange }: AutomationPaginationProps): JSX.Element => {
   const { currentPage = 1, totalItems = 0, itemsPerPage = 50, totalPages = 1 } = paginationData || {};
   
-  console.log('Pagination component - itemsPerPage:', itemsPerPage);
   
   const startItem = totalItems === 0 ? 0 : (currentPage - 1) * itemsPerPage + 1;
   const endItem = Math.min(currentPage * itemsPerPage, totalItems);
 
   const handlePageSizeChange = (event: SelectChangeEvent<number>) => {
     const newPageSize = event.target.value as number;
-    console.log('Page size changed to:', newPageSize);
     onPageSizeChange(newPageSize);
   };
 
   const handlePageChange = (event: React.ChangeEvent<unknown>, page: number) => {
-    console.log('Page changed to:', page);
     onPageChange(page);
   };
 

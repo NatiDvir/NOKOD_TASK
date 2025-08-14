@@ -26,7 +26,6 @@ const useUrlState = (): UseUrlStateReturn => {
   useEffect(() => {
     const parseUrlParams = () => {
       const urlParams = new URLSearchParams(window.location.search);
-      console.log('Parsing URL params:', window.location.search);
       
       const params: AutomationQueryParams = {
         page: parseInt(urlParams.get('page') || '1', 10),
@@ -39,7 +38,6 @@ const useUrlState = (): UseUrlStateReturn => {
         creationTime: urlParams.get('creationTime') || undefined
       };
 
-      console.log('Parsed params from URL:', params);
       setQueryParams(params);
     };
 
@@ -91,8 +89,6 @@ const useUrlState = (): UseUrlStateReturn => {
     const newUrl = `${window.location.pathname}${urlParams.toString() ? '?' + urlParams.toString() : ''}`;
     window.history.pushState({}, '', newUrl);
     
-    console.log('Updated URL with params:', cleanParams);
-    console.log('New URL:', newUrl);
   }, [queryParams]);
 
   return { queryParams, updateQueryParams };
