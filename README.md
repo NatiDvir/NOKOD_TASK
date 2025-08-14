@@ -1,5 +1,18 @@
 # Fullstack Automations Table - Advanced Data Management System
 
+## 📑 Table of Contents
+1. [Overview](#overview)
+2. [Key Features](#key-features-implemented)
+3. [Architecture & Design Decisions](#architecture--design-decisions)
+4. [Technical Implementation Details](#technical-implementation-details)
+5. [Performance Optimizations](#performance-optimizations)
+6. [API Endpoints](#api-endpoints)
+7. [Installation & Setup](#installation--setup)
+8. [Dependencies](#dependencies)
+9. [Project Structure](#project-structure)
+10. [Usage Examples](#usage-examples)
+11. [Development Notes](#development-notes)
+    
 ## Overview
 This project implements a comprehensive fullstack application for managing automation data with advanced filtering, sorting, and pagination capabilities. Built with performance and user experience in mind, it transforms a simple data display into a powerful data management interface.
 
