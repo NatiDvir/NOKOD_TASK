@@ -10,8 +10,8 @@
     "baseUrl": ".",
     "paths": {
       "@common/*": ["src/common/*"],
-      "@sharedTypes/*": ["../types.lib/*"],
-    },
+      "@sharedTypes/*": ["../types.lib/*"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules"]
